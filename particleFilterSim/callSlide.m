@@ -1,0 +1,1 @@
+move_pt = slide(pad_inpolygonMapformatX, pad_inpolygonMapformatY, pad_map_lines, spos, sang, sdir, sdist);
