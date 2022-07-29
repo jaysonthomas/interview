@@ -1,0 +1,6 @@
+clear
+rm rl
+make
+make clean
+
+

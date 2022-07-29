@@ -1,0 +1,9 @@
+cd output
+cp output.ps temp.ps
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pswrite -sOutputFile=output.ps temp.ps graph.ps
+gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=png256m -dGraphicsAlphaBits=8 \ -sOutputFile=output.png graph.png
+rm temp.ps
+psnup -4 output.ps finale.ps
+cd ..
+
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=output.pdf ./output/output.ps
