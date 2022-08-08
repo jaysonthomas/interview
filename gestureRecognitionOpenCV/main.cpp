@@ -15,7 +15,7 @@ int main( int argc, const char** argv )
   if(argc > 1) 
     cap.open(string(argv[1]));
   else
-    cap.open(CV_CAP_ANY);
+    cap.open(cv::CAP_ANY);
 
   if(!cap.isOpened())
     printf("Error: could not load a camera or video.\n");
@@ -30,12 +30,12 @@ int main( int argc, const char** argv )
   Mat ixframe, iyframe, itframe;
   
   cap >> pframe;
-  cvtColor( pframe, pframe, CV_BGR2GRAY );
+  cvtColor( pframe, pframe, cv::COLOR_BGR2GRAY );
   resize(pframe, pframe_mod, Size(pframe.cols/2, pframe.rows/2), 0.5, 0.5, INTER_NEAREST);
   pframe_mod.convertTo(pframe_mod, CV_32F, 1.0/255.0);
 
   cap >> cframe;
-  cvtColor( cframe, cframe, CV_BGR2GRAY );
+  cvtColor( cframe, cframe, cv::COLOR_BGR2GRAY );
   resize(cframe, cframe_mod, Size(cframe.cols/2, cframe.rows/2), 0.5, 0.5, INTER_NEAREST);
   cframe_mod.convertTo(cframe_mod, CV_32F, 1.0/255.0);
   
@@ -55,7 +55,7 @@ int main( int argc, const char** argv )
     waitKey(20);
     cap >> nframe;
     output = nframe.clone();
-    cvtColor( nframe, nframe, CV_BGR2GRAY );
+    cvtColor( nframe, nframe, cv::COLOR_BGR2GRAY );
     resize(nframe, nframe_mod, Size(nframe.cols/2, nframe.rows/2), 0.5, 0.5, INTER_NEAREST);
     nframe_mod.convertTo(nframe_mod, CV_32F, 1.0/255.0);
     

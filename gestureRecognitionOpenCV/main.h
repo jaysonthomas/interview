@@ -1,10 +1,9 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#include "/usr/local/include/opencv4/opencv2/objdetect/objdetect.hpp"
-// #include </usr/local/include/opencv4/opencv2/objdetect/objdetect.hpp>
-// #include </usr/local/include/opencv4/opencv2/highgui/highgui.hpp>
-// #include </usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp>
+#include <opencv2/objdetect/objdetect.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 #include <iostream>
 #include <stdio.h>
